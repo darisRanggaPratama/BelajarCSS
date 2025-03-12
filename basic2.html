@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector: Tag, Class, id, atribut, universal</title>
+    <style>
+        /* 1. Dasar, selector { property: value } */
+        p{
+            color: red;
+        }
+
+        /* 2. Selector Tag */
+        h1{
+            color: blue;
+            font-size: 24px;
+        }
+        /* 3. Selector Class */
+        .text-red{
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /* 4. Selector ID */
+        #special-paragraph{
+            font-size: 18px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* 5. Selector Atribut */
+        input[type="text"]{
+            border: 2px solid black;
+            background-color: yellowgreen;
+        }
+        /* 6. Selector Universal */
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 1px;
+            padding: 10px;
+        }
+        /* Cascading & Specificity */
+        /* 1. Cascading */
+        .conflict{
+            color: blue;
+        }
+
+        .conflict{
+            color: brown;
+            /* Yang akan diterapkan karena muncul terakhir */
+        }
+
+        /* 2. Specificity */
+        div#container .content p{
+            color: purple;
+            /* Specify tinggi */
+        }
+
+        .volume p{
+            color: orange;
+            /* Specify sedang */
+        }
+
+        /* Solusi konflik. Gunakan !important */
+        .important-example{
+            font-weight: bold!important;
+            font-style: italic;
+        }
+
+        /* Roadmap CSS: https://chatgpt.com/share/67d1b2fb-ffe0-800f-9a41-9fee542e4adc */
+
+    </style>
+</head>
+<body>
+    <!-- Contoh Selector -->
+  <h1>Judul Artikel</h1>
+  <p>Paragraf biasa</p>
+  <p class="text-red">Paragraf dengan class merah</p>
+  <p class="conflict">Contoh conflict</p>
+  <p id="special-paragraph" class="text-red">Paragraf spesial dengan ID</p>
+  <input type="text" value="Input text">
+
+  <!-- Contoh Specificity -->
+  <div id="container">
+    <div class="content">
+      <p>Paragraf dengan specificity tinggi</p>      
+    </div>
+    <div class="volume">
+        <p>Paragraf dengan specificity sedang</p>      
+      </div>
+  </div>
+
+  <!-- Contoh !important -->
+  <p class="important-example" style="font-weight: normal;">Teks ini akan bold & italic</p>
+</body>
+
+</html>
+

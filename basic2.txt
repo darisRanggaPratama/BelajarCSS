@@ -1,0 +1,43 @@
+Penjelasan konsep:
+
+Sintaks CSS Dasar:
+Terdiri dari selector (p), property (color), dan value (blue)
+Setiap deklarasi diakhiri titik koma
+Contoh: p { color: blue; }
+
+Selector Dasar:
+Tag: Memilih elemen berdasarkan tag HTML (h1, p)
+Class: Diawali titik (.), contoh .text-red
+ID: Diawali #, contoh #special-paragraph
+Atribut: Memilih berdasarkan atribut, contoh input[type="text"]
+Universal: Simbol * untuk memilih semua elemen
+
+
+Cascading & Specificity:
+Cascading: Aturan yang muncul terakhir akan menang jika spesifisitas sama
+
+Specificity Hierarchy:
+
+Inline styles
+ID
+Class/attribut/pseudo-class
+Tag/pseudo-element
+
+Contoh Specificity:
+div#container .content p (1 ID + 1 Class + 1 Tag)
+.content p (1 Class + 1 Tag)
+
+!important: Memaksa prioritas tertinggi, contoh !important
+
+Cara Mengatasi Konflik:
+Gunakan selector yang lebih spesifik
+Atur urutan stylesheet
+Gunakan !important (sebaiknya dihindari)
+Manfaatkan inheritance
+Verifikasi dengan dev tools browser
+
+Contoh kasus di atas menunjukkan bagaimana:
+Class selector bisa dikalahkan oleh ID selector
+!important mengesampingkan semua aturan
+Universal selector mempengaruhi semua elemen
+Aturan terakhir menang jika spesifisitas sama

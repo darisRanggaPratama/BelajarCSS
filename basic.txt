@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+font-family: Arial, Helvetica, sans-serif;
+- Mengatur jenis huruf default untuk semua teks dalam body
+- Arial adalah pilihan pertama
+- Jika Arial tidak tersedia, akan menggunakan Helvetica
+- Jika keduanya tidak ada, akan menggunakan font sans-serif yang tersedia di sistem
+
+margin: 20px;
+- Membuat jarak sebesar 20 pixel di sekeliling body
+- Jarak ini diterapkan ke semua sisi (atas, kanan, bawah, kiri)
+- Mencegah konten menempel di tepi browser
+
+background-color: #f0f0f0;
+- Mengatur warna latar belakang menjadi abu-abu muda
+- #f0f0f0 adalah kode warna dalam format heksadesimal
+- Warna ini lebih nyaman dilihat dibandingkan warna putih murni
+
+
+h1{
+    color: #333;
+    text-align: center;
+}
+
+color: #333;
+- Mengatur warna teks untuk heading h1
+- #333 adalah kode warna abu-abu tua dalam format heksadesimal
+- Warna ini memberikan kontras yang baik dengan latar belakang tanpa terlalu keras seperti warna hitam murni (#000)
+
+text-align: center;
+- Mengatur perataan teks menjadi di tengah
+- Heading h1 akan berada di tengah halaman secara horizontal
+- Membuat judul terlihat lebih seimbang dan menarik secara visual
+
+
+p {
+    color: #666;
+    line-height: 1.6;
+}
+
+color: #666;
+- Mengatur warna teks paragraf menjadi abu-abu sedang
+- #666 adalah kode warna dalam format heksadesimal
+- Warna ini lebih terang dari warna heading (h1) namun tetap mudah dibaca
+- Memberikan hirarki visual yang baik karena lebih terang dari heading
+
+line-height: 1.6;
+- Mengatur jarak antar baris dalam paragraf
+- Nilai 1.6 berarti jarak antar baris adalah 1.6 kali ukuran font
+- Membuat teks lebih mudah dibaca karena ada ruang yang cukup antar baris
+- Standar yang baik untuk keterbacaan teks di web adalah antara 1.5 hingga 1.7
+
+
+.box{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+background-color: #ffffff;
+- Mengatur warna latar belakang box menjadi putih
+- #ffffff adalah kode warna putih dalam format heksadesimal
+- Memberikan kontras dengan latar belakang body yang abu-abu muda
+
+padding: 20px;
+- Membuat jarak internal sebesar 20 pixel di dalam box
+- Jarak ini diterapkan ke semua sisi (atas, kanan, bawah, kiri)
+- Mencegah konten menempel di tepi box
+
+border-radius: 5px;
+- Membuat sudut box menjadi melengkung
+- Nilai 5px memberikan lengkungan yang halus
+- Membuat tampilan box lebih modern dan lembut
+
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+- Menambahkan bayangan pada box
+- 0 adalah pergeseran horizontal (tidak ada)
+- 2px adalah pergeseran vertikal ke bawah
+- 5px adalah tingkat blur bayangan
+- rgba(0, 0, 0, 0.1) adalah warna bayangan hitam dengan transparansi 10%
+- Memberikan efek box mengambang sedikit di atas halaman

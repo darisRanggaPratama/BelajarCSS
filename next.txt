@@ -1,0 +1,6 @@
+5. Next Steps:
+- Learn about CSS box model
+- Understanding display properties
+- Working with flexbox
+- Learning about positioning
+- Responsive design with media queries
