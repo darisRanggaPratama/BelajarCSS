@@ -1,0 +1,418 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6F4E37;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5A3C2A;
+}
+
+.btn-primary {
+    background-color: #C29D73;
+}
+
+.btn-primary:hover {
+    background-color: #B08C64;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #6F4E37;
+}
+
+/* Header Section - Flexbox Implementation */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #6F4E37;
+}
+
+.logo span {
+    color: #C29D73;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.navigation li a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navigation li a:hover {
+    color: #C29D73;
+}
+
+/* Hero Section - Flexbox Implementation */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589833052562-53bdfa9b1de3');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Featured Products - Grid Implementation */
+.featured {
+    padding: 5rem 5%;
+    background-color: #f9f9f9;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 200px;
+    background-color: #C29D73;
+    background-image: url('https://images.unsplash.com/photo-1621135177072-57c9b6242e7a');
+    background-size: cover;
+    background-position: center;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #6F4E37;
+}
+
+.product p {
+    margin: 0 1rem 1rem;
+}
+
+.product .price {
+    font-weight: 600;
+    color: #C29D73;
+}
+
+/* About Section - Flexbox Implementation */
+.about {
+    padding: 5rem 5%;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #6F4E37;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 1;
+    height: 400px;
+    background-color: #C29D73;
+    background-image: url('https://images.unsplash.com/photo-1582202737800-8ab9a8cc6e6a');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+/* Testimonials - Grid Implementation */
+.testimonials {
+    padding: 5rem 5%;
+    background-color: #f9f9f9;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.quote::before {
+    content: "";
+    font-size: 4rem;
+    color: #C29D73;
+    opacity: 0.2;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+}
+
+.customer {
+    font-weight: 600;
+    color: #6F4E37;
+}
+
+/* Location - Flexbox Implementation */
+.location {
+    padding: 5rem 5%;
+}
+
+.location-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.address, .hours {
+    flex: 1;
+    min-width: 250px;
+}
+
+.address h3, .hours h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #6F4E37;
+}
+
+.map {
+    flex: 2;
+    min-height: 300px;
+    background-color: #C29D73;
+    background-image: url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+/* Footer - Flexbox Implementation */
+.footer {
+    background-color: #2A2A2A;
+    color: #fff;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo span {
+    color: #C29D73;
+}
+
+.footer-links h3,
+.footer-social h3,
+.footer-newsletter h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #C29D73;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a:hover {
+    color: #C29D73;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #C29D73;
+}
+
+.footer-newsletter form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.footer-newsletter .btn {
+    border-radius: 0 4px 4px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    .navigation {
+        order: 3;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .navigation ul {
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-container {
+        flex-direction: column;
+    }
+    
+    .map {
+        min-height: 250px;
+    }
+}

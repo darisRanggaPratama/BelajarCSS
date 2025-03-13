@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Landing Page</title>
+    <style>
+        /* Menggunakan border-box untuk semua elemen */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header dengan box model */
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 20px 30px; /* Padding */
+            border-bottom: 5px solid #a0522d; /* Border */
+            margin-bottom: 20px; /* Margin */
+        }
+
+        /* Hero section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1561395049-69684aacf8de') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px; /* Padding */
+            margin-bottom: 30px; /* Margin */
+            border: 2px dashed #7b3f00; /* Border */
+        }
+
+        /* Kotak produk */
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px; /* Padding */
+            margin: 15px 0; /* Margin */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Tombol dengan box model */
+        .btn {
+            background: #a0522d;
+            color: white;
+            padding: 12px 24px; /* Padding */
+            border: none;
+            border-radius: 4px;
+            margin-top: 15px; /* Margin */
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px; /* Padding */
+            margin-top: 30px; /* Margin */
+            border-top: 3px double #a0522d; /* Border */
+        }
+
+        /* Demo box model */
+        .box-model-demo {
+            background: #f4f4f4;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Coffee Shop</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Great Coffee, Great Moments</h2>
+        <p>Start your day with our premium coffee</p>
+    </section>
+
+    <div class="box-model-demo">
+        <h3>Box Model Components:</h3>
+        <ul>
+            <li>Content: Teks dan gambar utama</li>
+            <li>Padding: Ruang antara konten dan border</li>
+            <li>Border: Garis pembungkus</li>
+            <li>Margin: Ruang di luar border</li>
+        </ul>
+    </div>
+
+    <section class="products">
+        <div class="product-card">
+            <h3>Espresso</h3>
+            <p>Strong and aromatic</p>
+            <button class="btn">Order Now</button>
+        </div>
+        <div class="product-card">
+            <h3>Cappuccino</h3>
+            <p>Creamy and smooth</p>
+            <button class="btn">Order Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Coffee Shop</p>
+    </footer>
+</body>
+</html>

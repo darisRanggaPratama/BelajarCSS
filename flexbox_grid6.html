@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Coffee Shop</title>
+  <style>
+    /* Reset dan pengaturan dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Header dan Navigasi (Flexbox) */
+    header {
+      background: #8B4513;
+      color: #fff;
+      padding: 20px;
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    /* Hero Section (Flexbox) */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1630338606772-392095666116') no-repeat center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+    
+    /* Content Section dan Menu Andalan (Grid) */
+    .content {
+      padding: 40px 0;
+    }
+    .content h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .menu-item {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .menu-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .menu-item h3 {
+      margin: 15px 0;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header dengan Navigasi -->
+  <header>
+    <div class="container">
+      <h2>Coffee Shop</h2>
+      <nav>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Selamat Datang di Coffee Shop</h1>
+      <p>Rasakan sensasi kopi terbaik setiap harinya.</p>
+    </div>
+  </section>
+  
+  <!-- Content: Menu Andalan (Grid) -->
+  <section class="content" id="menu">
+    <div class="container">
+      <h2>Menu Andalan</h2>
+      <div class="menu">
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1550916825-64934687f516" alt="Espresso">
+          <h3>Espresso</h3>
+          <p>Kopi pekat yang disajikan dalam porsi kecil.</p>
+        </div>
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1573583182490-a532db7377b2" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p>Kombinasi espresso, susu, dan busa susu yang lembut.</p>
+        </div>
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1525629545813-e4e7ba89e506" alt="Latte">
+          <h3>Latte</h3>
+          <p>Kopi dengan campuran susu panas, sempurna untuk santai.</p>
+        </div>
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1582269699288-c9b3a1d96bb9" alt="Mocha">
+          <h3>Mocha</h3>
+          <p>Paduan kopi dan cokelat yang menggoda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Coffee Shop. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

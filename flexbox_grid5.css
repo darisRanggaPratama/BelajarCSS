@@ -1,0 +1,232 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling Navigasi */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4a2c1a; /* Cokelat tua */
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    background-image: url('https://images.unsplash.com/photo-1582010622410-3060ca20ab10'); /* Ganti dengan URL gambar Anda */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Styling Menu */
+.menu {
+    padding: 40px;
+    background-color: #f5e8d0; /* Krem */
+}
+
+.menu h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 250px; /* Lebar tetap untuk konsistensi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efek transisi */
+}
+
+.menu-item img {
+    width: 100%; /* Gambar mengisi lebar kontainer */
+    height: 150px; /* Tinggi tetap */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    border-radius: 10px; /* Sudut melengkung */
+    margin-bottom: 10px; /* Jarak ke teks di bawah */
+}
+
+.menu-item h3 {
+    font-family: 'Poppins', sans-serif; /* Ganti sesuai font Anda */
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.menu-item p {
+    font-family: 'Open Sans', sans-serif; /* Ganti sesuai font Anda */
+    font-size: 0.9em;
+    color: #666;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px); /* Efek angkat saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar */
+}
+
+/* Styling Testimoni */
+.testimonials {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #f5e8d0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling Kontak */
+.contact {
+    padding: 40px;
+    background-color: #4a2c1a;
+    color: #fff;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #fff;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #4a2c1a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #f5e8d0;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #4a2c1a;
+    color: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .menu-items {
+        width: 100%; /* Lebar penuh pada layar kecil */
+        max-width: 300px; /* Batas maksimal */
+    }
+}

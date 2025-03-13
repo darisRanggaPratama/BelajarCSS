@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Coffee Shop</title>
+    <link rel="stylesheet" href="flexBox_Grid3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section with Flexbox -->
+    <header class="header">
+        <div class="logo">
+            <h1>Aroma<span>Coffee</span></h1>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#location">Location</a></li>
+            </ul>
+        </nav>
+        <div class="cta-button">
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Flexbox -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Experience the Richest Coffee in Town</h1>
+            <p>Handcrafted with love and passion since 2010</p>
+            <a href="#menu" class="btn btn-primary">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Featured Products with Grid -->
+    <section class="featured" id="menu">
+        <h2 class="section-title">Our Featured Drinks</h2>
+        <div class="products-grid">
+            <div class="product">
+                <div class="product-image espresso-image"></div>
+                <h3>Espresso</h3>
+                <p>Rich, bold and intense</p>
+                <p class="price">Rp 25.000</p>
+            </div>
+            <div class="product">
+                <div class="product-image cappuccino-image"></div>
+                <h3>Cappuccino</h3>
+                <p>Balanced espresso with steamed milk</p>
+                <p class="price">Rp 35.000</p>
+            </div>
+            <div class="product">
+                <div class="product-image latte-image"></div>
+                <h3>Latte</h3>
+                <p>Smooth and creamy</p>
+                <p class="price">Rp 35.000</p>
+            </div>
+            <div class="product">
+                <div class="product-image mocha-image"></div>
+                <h3>Mocha</h3>
+                <p>Chocolate and coffee perfection</p>
+                <p class="price">Rp 40.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Flexbox -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Aroma Coffee</h2>
+                <p>We are passionate about providing the finest coffee experience. Our beans are ethically sourced from premium coffee-growing regions around the world.</p>
+                <p>Every cup is crafted with care by our skilled baristas who take pride in their art.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials with Grid -->
+    <section class="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="quote">"The best coffee I've ever had. The ambiance is perfect for both work and relaxation."</div>
+                <div class="customer">- Sarah W.</div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"Their cappuccino is a must-try! I visit this place every morning."</div>
+                <div class="customer">- Budi S.</div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"Friendly staff and amazing coffee. This is my go-to place for meetings."</div>
+                <div class="customer">- Andi P.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location with Flexbox -->
+    <section class="location" id="location">
+        <h2 class="section-title">Visit Us</h2>
+        <div class="location-container">
+            <div class="address">
+                <h3>Our Location</h3>
+                <p>Jl. Kopi Nikmat No. 42</p>
+                <p>Jakarta Selatan, 12345</p>
+                <p>Indonesia</p>
+                <p>Tel: +62 21 1234 5678</p>
+            </div>
+            <div class="hours">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7:00 AM - 10:00 PM</p>
+                <p>Saturday - Sunday: 8:00 AM - 11:00 PM</p>
+            </div>
+            <div class="map"></div>
+        </div>
+    </section>
+
+    <!-- Footer with Flexbox -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Aroma<span>Coffee</span></h2>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">TW</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Aroma Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

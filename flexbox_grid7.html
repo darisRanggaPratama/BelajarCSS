@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Landing Page</title>
+    <style>
+        /* Flexbox untuk navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #f5e7d8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Grid untuk section utama */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            min-height: 500px;
+            background: url('https://images.unsplash.com/photo-1523179985834-1363f5c47d84') center/cover;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Flexbox untuk tombol CTA */
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Grid untuk fitur */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        /* Flexbox untuk footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #3a2d28;
+            color: white;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 300px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header dengan Flexbox -->
+    <header class="navbar">
+        <div class="logo">☕ Coffee Haven</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section dengan Grid -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Experience the Perfect Brew</h1>
+            <p>Handcrafted coffee made with love</p>
+            <div class="cta-buttons">
+                <button>Order Now</button>
+                <button>View Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section dengan Grid -->
+    <section class="features">
+        <div class="feature-item">
+            <h3>☕ Premium Beans</h3>
+            <p>100% Arabica beans from around the world</p>
+        </div>
+        <div class="feature-item">
+            <h3>🍰 Fresh Pastries</h3>
+            <p>Daily baked goods made in-house</p>
+        </div>
+        <div class="feature-item">
+            <h3>📚 Cozy Atmosphere</h3>
+            <p>Relax in our comfortable seating area</p>
+        </div>
+    </section>
+
+    <!-- Footer dengan Flexbox -->
+    <footer class="footer">
+        <div class="copyright">© 2023 Coffee Haven</div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

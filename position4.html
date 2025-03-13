@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffee Shop Landing Page</title>
+  <style>
+    /* Reset margin & padding dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===============================
+       1. Display & Visibility
+       =============================== */
+
+    /* Header menggunakan display: block (default untuk elemen header) */
+    header {
+      background: #6f4e37;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      /* positioning static (default) */
+      position: static;
+    }
+
+    /* Navigation menggunakan inline-block untuk mengatur menu secara horizontal */
+    nav ul {
+      list-style: none;
+      text-align: center;
+      padding: 10px 0;
+      background: #8b5e3c;
+    }
+
+    nav ul li {
+      display: inline-block; /* inline-block: memungkinkan penataan horizontal dan bisa diberikan margin/padding */
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    /* ===============================
+       2. Positioning & Floating
+       =============================== */
+
+    /* Hero Section dengan relative positioning untuk mengatur konten di dalamnya */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1554285833-5eb928f2d4c1') no-repeat center center/cover;
+      height: 400px;
+      position: relative;
+    }
+
+    /* Teks pada hero menggunakan absolute positioning di dalam parent yang relative */
+    .hero h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 3em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    /* Section Produk dengan floating & clearing */
+    .produk {
+      padding: 20px;
+      background: #f4f4f4;
+      overflow: auto; /* metode clearing dengan overflow auto */
+    }
+
+    .produk-item {
+      width: 30%;
+      margin: 1.66%;
+      float: left; /* floating kiri untuk menyusun grid */
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+      /* Menggunakan display: inline-block sebagai alternatif, tapi di sini menggunakan float */
+      display: inline-block;
+    }
+
+    /* Footer fixed di bawah halaman */
+    footer {
+      background: #6f4e37;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      /* Fixed positioning untuk selalu tampil di bagian bawah viewport */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    /* ===============================
+       3. Contoh Visibility dan Positioning Lainnya
+       =============================== */
+
+    /* Box demo untuk visibility dan positioning relative */
+    .demo-container {
+      margin: 20px;
+      padding: 10px;
+      border: 1px dashed #999;
+    }
+
+    .demo-box {
+      width: 150px;
+      height: 150px;
+      background: #c0ffee;
+      margin: 10px;
+      line-height: 150px;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Menggunakan display: inline untuk box pertama */
+    .box-inline {
+      display: inline;
+    }
+
+    /* Menggunakan display: block untuk box kedua */
+    .box-block {
+      display: block;
+    }
+
+    /* Menggunakan display: inline-block untuk box ketiga */
+    .box-inline-block {
+      display: inline-block;
+    }
+
+    /* Menggunakan display: none untuk box keempat (tidak ditampilkan) */
+    .box-none {
+      display: none;
+    }
+
+    /* Contoh visibility: hidden pada teks */
+    .invisible-text {
+      visibility: hidden;
+    }
+
+    /* Contoh positioning sticky */
+    .sticky-banner {
+      background: #ffa;
+      padding: 10px;
+      text-align: center;
+      /* Sticky positioning, banner akan tetap terlihat saat scroll mencapai posisi tertentu */
+      position: sticky;
+      top: 0;
+      border-bottom: 2px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky banner menggunakan positioning sticky -->
+  <div class="sticky-banner">
+    Selamat Datang di Coffee Shop Kami!
+  </div>
+
+  <header>
+    <h2>Coffee Shop</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li>Beranda</li>
+      <li>Menu</li>
+      <li>Promo</li>
+      <li>Kontak</li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Nikmati Kopi Terbaik</h1>
+  </section>
+
+  <section class="produk">
+    <h2 style="text-align: center; margin-bottom: 20px;">Produk Kami</h2>
+    <!-- Contoh produk dengan float dan clear melalui overflow auto di parent -->
+    <div class="produk-item">
+      <h3>Kopi Espresso</h3>
+      <p>Harga: Rp30.000</p>
+    </div>
+    <div class="produk-item">
+      <h3>Cappuccino</h3>
+      <p>Harga: Rp35.000</p>
+    </div>
+    <div class="produk-item">
+      <h3>Latte</h3>
+      <p>Harga: Rp40.000</p>
+    </div>
+  </section>
+
+  <!-- Demo container untuk menampilkan berbagai display dan visibility -->
+  <section class="demo-container">
+    <h2>Demo Display & Visibility</h2>
+    <div class="demo-box box-inline">Inline</div>
+    <div class="demo-box box-block">Block</div>
+    <div class="demo-box box-inline-block">Inline-Block</div>
+    <div class="demo-box box-none">None (Tidak terlihat)</div>
+    <p class="invisible-text">Teks ini tidak terlihat karena visibility: hidden.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Coffee Shop. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

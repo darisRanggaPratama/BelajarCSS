@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrewCraft - Premium Coffee Shop</title>
+    <meta name="description" content="BrewCraft - Experience the finest coffee in town. Handcrafted coffee made with passion, using the finest beans from around the world." />
+    <meta name="author" content="BrewCraft" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="flexbox_grid4.css">
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <div class="logo-circle">
+            <span>BC</span>
+          </div>
+          <h1>Brew<span>Craft</span></h1>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <button class="btn btn-outline">Order Now</button>
+        
+        <div class="mobile-menu">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Experience the Finest <span>Coffee</span> in Town</h1>
+          <p>
+            Handcrafted coffee made with passion, using the finest beans from around the world. 
+            Visit us for a perfect blend of taste and ambiance.
+          </p>
+          <div class="btn-group">
+            <button class="btn btn-primary">View Our Menu</button>
+            <button class="btn btn-outline">Book a Table</button>
+          </div>
+          
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Coffee Varieties</span>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">20+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">10k+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="overlay"></div>
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop" alt="Freshly brewed coffee">
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Coffee Menu</h2>
+          <p>
+            Discover our selection of premium coffees, crafted with passion and expertise to provide you with the perfect cup every time.
+          </p>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-card">
+            <div class="menu-image">
+              <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?q=80&w=1035&auto=format&fit=crop" alt="Espresso">
+            </div>
+            <div class="menu-info">
+              <div class="menu-header">
+                <h3>Espresso</h3>
+                <span class="price">Rp 25.000</span>
+              </div>
+              <p>Rich and concentrated coffee served in small shots.</p>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-image">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=935&auto=format&fit=crop" alt="Cappuccino">
+            </div>
+            <div class="menu-info">
+              <div class="menu-header">
+                <h3>Cappuccino</h3>
+                <span class="price">Rp 32.000</span>
+              </div>
+              <p>Espresso with steamed milk and topped with foamed milk.</p>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-image">
+              <img src="https://images.unsplash.com/photo-1593443320739-77f74939d0da?q=80&w=1035&auto=format&fit=crop" alt="Latte">
+            </div>
+            <div class="menu-info">
+              <div class="menu-header">
+                <h3>Latte</h3>
+                <span class="price">Rp 30.000</span>
+              </div>
+              <p>Espresso with a lot of steamed milk and a light layer of foam.</p>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-image">
+              <img src="https://images.unsplash.com/photo-1587080413959-06b859fb107d?q=80&w=992&auto=format&fit=crop" alt="Mocha">
+            </div>
+            <div class="menu-info">
+              <div class="menu-header">
+                <h3>Mocha</h3>
+                <span class="price">Rp 35.000</span>
+              </div>
+              <p>Espresso with chocolate, steamed milk, and whipped cream.</p>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-image">
+              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1169&auto=format&fit=crop" alt="Cold Brew">
+            </div>
+            <div class="menu-info">
+              <div class="menu-header">
+                <h3>Cold Brew</h3>
+                <span class="price">Rp 38.000</span>
+              </div>
+              <p>Coffee steeped in cold water for 12+ hours for a smooth taste.</p>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-image">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1170&auto=format&fit=crop" alt="Pour Over">
+            </div>
+            <div class="menu-info">
+              <div class="menu-header">
+                <h3>Pour Over</h3>
+                <span class="price">Rp 33.000</span>
+              </div>
+              <p>Manually brewed coffee with a clean, detailed flavor profile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=1171&auto=format&fit=crop" alt="Our coffee shop">
+            <div class="feature-badge">
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+              </div>
+              <div>
+                <p>Years of Excellence</p>
+                <p class="years">Since 2003</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-text">
+            <h2>About BrewCraft</h2>
+            <p>
+              We started our journey as a small coffee cart in 2003, with a simple mission: to serve the perfect cup of coffee. Today, we have grown into a beloved destination for coffee enthusiasts, maintaining our commitment to quality and community.
+            </p>
+            
+            <div class="features">
+              <div class="feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"/><path d="M12 16v6"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="M16 6 8 14"/><path d="M16 14 8 6"/></svg>
+                </div>
+                <div>
+                  <h4>Premium Beans</h4>
+                  <p>Sourced from sustainable farms across the globe.</p>
+                </div>
+              </div>
+              
+              <div class="feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                </div>
+                <div>
+                  <h4>Expert Baristas</h4>
+                  <p>Skilled professionals who perfect every cup.</p>
+                </div>
+              </div>
+              
+              <div class="feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div>
+                  <h4>Award Winning</h4>
+                  <p>Recognized for our quality and service excellence.</p>
+                </div>
+              </div>
+              
+              <div class="feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5z"/></svg>
+                </div>
+                <div>
+                  <h4>Cozy Atmosphere</h4>
+                  <p>A welcoming space designed for comfort and connection.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Customers Say</h2>
+          <p>
+            Don't just take our word for it. Here's what our valued customers have to say about their BrewCraft experience.
+          </p>
+        </div>
+        
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.875 17.5H3.125V12.5C3.125 7.5 7.5 3.75 12.5 3.75V7.5C10.8424 7.5 9.25269 8.15848 8.08058 9.33058C6.90848 10.5027 6.25 12.0924 6.25 13.75H11.875V17.5ZM26.875 17.5H18.125V12.5C18.125 7.5 22.5 3.75 27.5 3.75V7.5C25.8424 7.5 24.2527 8.15848 23.0806 9.33058C21.9085 10.5027 21.25 12.0924 21.25 13.75H26.875V17.5Z" fill="#C87941"/>
+              </svg>
+            </div>
+            
+            <p class="testimonial-text">
+              The best coffee I've ever had! The atmosphere is amazing and the staff are always friendly. BrewCraft has become my second home for work and meetings.
+            </p>
+            
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Budi Santoso">
+              <div>
+                <h4>Budi Santoso</h4>
+                <p>Regular Customer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.875 17.5H3.125V12.5C3.125 7.5 7.5 3.75 12.5 3.75V7.5C10.8424 7.5 9.25269 8.15848 8.08058 9.33058C6.90848 10.5027 6.25 12.0924 6.25 13.75H11.875V17.5ZM26.875 17.5H18.125V12.5C18.125 7.5 22.5 3.75 27.5 3.75V7.5C25.8424 7.5 24.2527 8.15848 23.0806 9.33058C21.9085 10.5027 21.25 12.0924 21.25 13.75H26.875V17.5Z" fill="#C87941"/>
+              </svg>
+            </div>
+            
+            <p class="testimonial-text">
+              As a food blogger, I've visited many coffee shops, but BrewCraft stands out. Their attention to detail in every cup and their pastry selection is outstanding.
+            </p>
+            
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Siti Rahayu">
+              <div>
+                <h4>Siti Rahayu</h4>
+                <p>Food Blogger</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.875 17.5H3.125V12.5C3.125 7.5 7.5 3.75 12.5 3.75V7.5C10.8424 7.5 9.25269 8.15848 8.08058 9.33058C6.90848 10.5027 6.25 12.0924 6.25 13.75H11.875V17.5ZM26.875 17.5H18.125V12.5C18.125 7.5 22.5 3.75 27.5 3.75V7.5C25.8424 7.5 24.2527 8.15848 23.0806 9.33058C21.9085 10.5027 21.25 12.0924 21.25 13.75H26.875V17.5Z" fill="#C87941"/>
+              </svg>
+            </div>
+            
+            <p class="testimonial-text">
+              I hold all my business meetings at BrewCraft. The quiet environment, reliable Wi-Fi, and exceptional coffee make it perfect for productive discussions.
+            </p>
+            
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Agus Wijaya">
+              <div>
+                <h4>Agus Wijaya</h4>
+                <p>Local Business Owner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Visit Us Today</h2>
+          <p>
+            We'd love to see you at BrewCraft. Drop by our location or send us a message with any questions.
+          </p>
+        </div>
+        
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            
+            <div class="info-items">
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4>Phone Number</h4>
+                  <p>(+62) 123-456-7890</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z"/><polyline points="15,9 18,9 18,11"/><path d="M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2v0"/><line x1="6" x2="7" y1="10" y2="10"/></svg>
+                </div>
+                <div>
+                  <h4>Email Address</h4>
+                  <p>hello@brewcraft.com</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4>Our Location</h4>
+                  <p>Jl. Kenangan No. 123, Jakarta Selatan, Indonesia</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <h4>Opening Hours</h4>
+                  <p>
+                    Monday - Friday: 7am - 9pm<br>
+                    Saturday - Sunday: 8am - 10pm
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-media">
+              <h4>Follow Us</h4>
+              <div class="social-icons">
+                <a href="#" class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" placeholder="Enter your email">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="How can we help you?">
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Your message here..." rows="5"></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126934.11720211345!2d106.7229282561058!3d-6.2292494647311655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sSouth%20Jakarta%2C%20South%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1653905249414!5m2!1sen!2sid" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <div class="logo-circle">
+                <span>BC</span>
+              </div>
+              <h1>Brew<span>Craft</span></h1>
+            </div>
+            <p>
+              Serving the perfect cup since 2003. Our mission is to provide quality coffee in a welcoming environment.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Jl. Kenangan No. 123, Jakarta Selatan, Indonesia</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>(+62) 123-456-7890</span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>hello@brewcraft.com</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter for updates on new coffee varieties and promotions.</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Your email">
+              <button class="btn btn-primary">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2023 BrewCraft. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

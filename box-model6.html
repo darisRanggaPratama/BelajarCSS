@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Bliss Coffee</title>
+    <style>
+        /* Reset CSS dan Box-Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        .header {
+            padding: 20px;
+            border-bottom: 2px solid #6F4E37;
+            margin: 10px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 60px;
+            padding: 10px;
+            border: 2px solid #6F4E37;
+            margin-right: 30px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 500px;
+            background: url('https://images.unsplash.com/photo-1583142324019-dcd1e0f24d1e') center/cover;
+            padding: 80px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .hero-content {
+            width: 50%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            gap: 30px;
+            padding: 40px 0;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            width: 300px;
+            height: 250px;
+            padding: 20px;
+            border: 1px solid #6F4E37;
+            border-radius: 8px;
+            margin: 10px;
+            background: #f9f9f9;
+        }
+
+        /* Button Styles */
+        .cta-button {
+            padding: 12px 30px;
+            margin-top: 20px;
+            border: 2px solid #6F4E37;
+            border-radius: 25px;
+            background: #6F4E37;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        /* Footer Styles */
+        .footer {
+            padding: 30px;
+            border-top: 2px solid #6F4E37;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Bean Bliss</div>
+            <div>
+                <a href="#home" style="margin-right: 20px;">Home</a>
+                <a href="#menu" style="margin-right: 20px;">Menu</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Specialty Coffee Experience</h1>
+            <p>Discover the art of perfect coffee</p>
+            <button class="cta-button">Explore Menu</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Premium Beans</h3>
+            <p>Sourced from sustainable farms worldwide</p>
+        </div>
+        <div class="feature-card">
+            <h3>Expert Baristas</h3>
+            <p>Professionally trained coffee artists</p>
+        </div>
+        <div class="feature-card">
+            <h3>Cozy Atmosphere</h3>
+            <p>Perfect space for work and relaxation</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2023 Bean Bliss Coffee. All rights reserved.</p>
+    </footer>
+</body>
+</html>
