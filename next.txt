@@ -4,3 +4,13 @@
 - Working with flexbox
 - Learning about positioning
 - Responsive design with media queries
+
+3. Box Model
+Komponen Box Model:
+Konten, padding, border, dan margin.
+Pengaturan Dimensi:
+Mengatur width, height, dan penggunaan properti box-sizing.
+Debugging:
+Menggunakan tools developer di browser untuk menganalisis box model.
+
+Roadmap CSS: https://chatgpt.com/share/67d1b2fb-ffe0-800f-9a41-9fee542e4adc 
