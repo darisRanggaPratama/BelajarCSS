@@ -1,0 +1,130 @@
+/* Pengaturan Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #8B4513; /* Hexadecimal */
+}
+
+h2 {
+    font-size: 2rem;
+    color: rgb(139, 69, 19); /* RGB */
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: rgba(139, 69, 19, 0.8); /* RGBA */
+}
+
+h4 {
+    font-size: 1.25rem;
+    color: hsl(30, 100%, 40%); /* HSL */
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Pengaturan Warna */
+.header {
+    background-color: #F5F5DC; /* Hex */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* Penambahan style untuk gambar */
+.hero {
+    position: relative;
+    /* ... properti lain tetap ... */
+}
+
+.hero-image {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.tagline {
+    color: rgb(255, 255, 240); /* RGB */
+}
+
+.btn {
+    background-color: hsl(30, 100%, 50%); /* HSL */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: hsla(30, 100%, 40%, 0.9); /* HSLA */
+}
+
+.menu {
+    padding: 2rem;
+    background-color: rgba(245, 245, 220, 0.8); /* RGBA */
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.footer {
+    background-color: sienna; /* Nama warna */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .hero-image {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}

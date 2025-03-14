@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <style>
+        /* Base styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Positioning Examples */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #8B4513;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .hero {
+            position: relative;
+            height: 500px;
+            background: url('https://images.unsplash.com/photo-1522551458619-a2427b661528') center/cover;
+            margin-top: 60px; /* Offset for fixed header */
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .menu-section {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background: #A0522D;
+            padding: 2rem;
+        }
+
+        /* Display & Visibility Examples */
+        .menu-item {
+            display: inline-block;
+            width: 200px;
+            margin: 1rem;
+            padding: 1rem;
+            background: #D2B48C;
+            text-align: center;
+        }
+
+        .hidden-item {
+            visibility: hidden;
+        }
+
+        .removed-item {
+            display: none;
+        }
+
+        /* Float & Clear Examples */
+        .about-section {
+            padding: 2rem;
+            overflow: auto; /* Clearfix */
+        }
+
+        .about-image {
+            float: left;
+            width: 300px;
+            margin-right: 1rem;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Additional styling */
+        .button {
+            background: #D2691E;
+            color: white;
+            padding: 1rem 2rem;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        footer {
+            position: static;
+            background: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Position Header -->
+    <header class="header">
+        <h1>Coffee Haven</h1>
+    </header>
+
+    <!-- Hero Section with Absolute Positioning -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Perfect Brew</h2>
+            <p>Handcrafted coffee made with love</p>
+            <a href="#" class="button">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Sticky Menu Section -->
+    <section class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-item">Espresso</div>
+        <div class="menu-item hidden-item">Latte (Seasonal)</div>
+        <div class="menu-item removed-item">Cold Brew</div>
+        <div class="menu-item">Cappuccino</div>
+    </section>
+
+    <!-- Float & Clear Section -->
+    <section class="about-section clearfix">
+        <img src="https://images.unsplash.com/photo-1533776992670-a72f4c28235e" alt="Coffee Beans" class="about-image">
+        <p>About Us: We source the finest coffee beans from around the world to create the perfect cup. Our master roasters have over 20 years of experience in crafting specialty coffee blends.</p>
+        <p>Our Mission: To provide the best coffee experience while supporting sustainable farming practices.</p>
+    </section>
+
+    <!-- Static Position Footer -->
+    <footer>
+        <p>&copy; 2024 Coffee Haven</p>
+    </footer>
+</body>
+</html>

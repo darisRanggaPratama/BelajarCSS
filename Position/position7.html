@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven Coffee</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Fixed Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Hidden Element Example */
+        .hidden-element {
+            visibility: hidden;
+        }
+
+        /* Sticky Announcement Bar */
+        .announcement-bar {
+            position: sticky;
+            top: 0;
+            background: #6f4e37;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+            z-index: 99;
+        }
+
+        /* Navigation */
+        .nav-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin: 0 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1574333751899-72c1e3d963fd') center/cover;
+            position: relative;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -20px;
+            right: 50px;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 4rem 2rem;
+        }
+
+        .menu-item {
+            display: inline-block;
+            width: 30%;
+            margin: 1%;
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            vertical-align: top;
+        }
+
+        /* About Section with Float */
+        .about {
+            padding: 4rem 2rem;
+            background: #f5f5f5;
+        }
+
+        .about img {
+            float: left;
+            width: 45%;
+            margin-right: 2rem;
+            border-radius: 10px;
+        }
+
+        .about::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Mobile Menu (Hidden on Desktop) */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #6f4e37;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .menu-item {
+                display: block;
+                width: 100%;
+                margin: 1rem 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="announcement-bar">
+        🎉 Grand Opening Special - 50% Off All Drinks!
+    </div>
+
+    <header class="header">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <span class="hidden-element">Invisible Element</span>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-badge">
+            <h2>Artisanal Coffee Crafted with Love</h2>
+            <p>Since 2024</p>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Our Best Sellers</h2>
+        <div class="menu-item">
+            <h3>Classic Espresso</h3>
+            <p>Rich and bold traditional espresso</p>
+        </div>
+        <div class="menu-item">
+            <h3>Caramel Macchiato</h3>
+            <p>Sweet caramel meets espresso perfection</p>
+        </div>
+        <div class="menu-item">
+            <h3>Cold Brew</h3>
+            <p>Smooth and refreshing cold brew coffee</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <img src="https://images.unsplash.com/photo-1616899933833-e4f4559ef732" alt="Coffee Beans">
+        <div class="about-text">
+            <h2>Our Story</h2>
+            <p>Founded in 2024, Brew Haven Coffee is dedicated to bringing you the finest quality coffee from around the world. Our passion for perfect brewing techniques ensures every cup is a masterpiece.</p>
+        </div>
+    </section>
+
+    <div class="mobile-menu">
+        ☕
+    </div>
+</body>
+</html>

@@ -1,0 +1,340 @@
+/* Base Styles & CSS Variables */
+:root {
+    /* Color palette using different formats */
+    --primary: #5A3921; /* Brown - HEX format */
+    --secondary: rgb(198, 151, 116); /* Tan - RGB format */
+    --accent: rgba(226, 185, 90, 0.9); /* Gold - RGBA format */
+    --background: hsl(30, 33%, 95%); /* Off-white - HSL format */
+    --text-dark: #333333; /* Dark gray - HEX format */
+    --text-light: white; /* White - named color */
+}
+
+/* Typography Demonstration */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Font family implementation */
+    font-family: 'Poppins', sans-serif;
+    /* Font size implementation */
+    font-size: 16px;
+    /* Line height implementation */
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text-dark);
+}
+
+/* Container for layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography settings for headings */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    /* Font weight implementation */
+    font-weight: 700;
+    /* Text alignment implementation */
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Navigation styles */
+header {
+    background-color: var(--primary);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 2rem;
+}
+
+.menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--accent);
+}
+
+/* Hero section */
+#hero {
+    background-color: var(--secondary);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-light);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: var(--text-dark);
+}
+
+.btn-secondary {
+    background-color: var(--accent);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+/* Featured section */
+#featured {
+    padding: 4rem 0;
+}
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.coffee-card {
+    background-color: var(--text-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.coffee-card:hover {
+    transform: translateY(-10px);
+}
+
+.coffee-image {
+    height: 200px;
+    background-color: var(--secondary);
+    background-size: cover;
+    background-position: center;
+}
+
+.coffee-1 {
+    background-color: #8b5a2b;
+}
+
+.coffee-2 {
+    background-color: #6f4e37;
+}
+
+.coffee-3 {
+    background-color: #a67b5b;
+}
+
+.coffee-card h3, .coffee-card p {
+    padding: 0 1.5rem;
+}
+
+.coffee-card h3 {
+    margin-top: 1.5rem;
+    color: var(--primary);
+}
+
+.description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* About section */
+#about {
+    padding: 4rem 0;
+    background-color: var(--text-light);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mission {
+    font-style: italic;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Newsletter section */
+#newsletter {
+    background-color: var(--accent);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#newsletter h2 {
+    color: var(--text-dark);
+}
+
+#newsletter p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+}
+
+form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+form button {
+    border-radius: 0 30px 30px 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.address {
+    margin: 1rem 0;
+    font-weight: 300;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .menu {
+        display: none;
+    }
+    
+    form {
+        flex-direction: column;
+    }
+    
+    input[type="email"] {
+        border-radius: 30px;
+        margin-bottom: 1rem;
+    }
+    
+    form button {
+        border-radius: 30px;
+    }
+}

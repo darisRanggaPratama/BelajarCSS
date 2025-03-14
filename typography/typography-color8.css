@@ -1,0 +1,162 @@
+/* Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Header styles */
+.header {
+    background-color: #6F4E37; /* HEX color */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.nav a {
+    color: rgb(255, 255, 255); /* RGB color */
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+/* Hero section dengan gambar */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    padding: 2rem;
+    color: white;
+}
+
+.hero-image {
+    width: 50%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 0 0 0 100px;
+}
+
+/* Overlay untuk teks lebih readable */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.7) 40%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+}
+
+/* Product card dengan gambar */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1rem;
+}
+
+.product-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.product-card h3 {
+    padding: 0 1rem;
+}
+
+.product-card p {
+    padding: 0 1rem 1rem;
+}
+
+.price {
+    color: green; /* Named color */
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* About section */
+.about {
+    background-color: #f8f8f8;
+    padding: 4rem 2rem;
+}
+
+.highlight {
+    background-color: hsla(120, 60%, 70%, 0.3); /* HSLA color */
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Button styles */
+.cta-button {
+    background-color: #6F4E37;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: rgba(111, 78, 55, 0.9);
+}
+
+/* Responsive images */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        width: 100%;
+        padding: 4rem 1rem;
+        text-align: center;
+    }
+    
+    .hero-image {
+        width: 100%;
+        height: 400px;
+        border-radius: 0;
+        order: -1;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+}

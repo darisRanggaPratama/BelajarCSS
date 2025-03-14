@@ -1,16 +1,8 @@
-5. Next Steps:
-- Learn about CSS box model
-- Understanding display properties
-- Working with flexbox
-- Learning about positioning
-- Responsive design with media queries
-
-3. Box Model
-Komponen Box Model:
-Konten, padding, border, dan margin.
-Pengaturan Dimensi:
-Mengatur width, height, dan penggunaan properti box-sizing.
-Debugging:
-Menggunakan tools developer di browser untuk menganalisis box model.
+5. Typography dan Warna
+Mengatur Teks:
+Font-family, font-size, font-weight, line-height, dan text-align.
+Warna:
+Format warna: nama warna, HEX, RGB, RGBA, HSL
+Penggunaan web fonts (misalnya Google Fonts)
 
 Roadmap CSS: https://chatgpt.com/share/67d1b2fb-ffe0-800f-9a41-9fee542e4adc 

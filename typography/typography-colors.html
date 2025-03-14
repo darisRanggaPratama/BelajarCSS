@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bean - Artisan Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2C1810;
+            --secondary-color: rgb(198, 164, 126);
+            --accent-color: hsl(30, 70%, 60%);
+            --text-dark: #333333;
+            --text-light: rgba(255, 255, 255, 0.95);
+            --background-light: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--secondary-color);
+            margin-top: 0.5rem;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 24, 16, 0.8), rgba(44, 24, 16, 0.8)),
+                        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085');
+            background-size: cover;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .features {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgb(102, 102, 102);
+        }
+
+        .cta {
+            background-color: var(--accent-color);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            color: hsl(30, 20%, 25%);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">Brew & Bean</div>
+        <div class="tagline">Artisanal Coffee Experience</div>
+    </header>
+
+    <section class="hero">
+        <h1>Discover Your Perfect Cup</h1>
+        <p>Experience the art of coffee crafting with our carefully selected beans and expert baristas.</p>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e" alt="Premium Coffee Beans">
+                <h3>Premium Beans</h3>
+                <p>Ethically sourced from the world's finest coffee regions.</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb" alt="Expert Barista">
+                <h3>Expert Baristas</h3>
+                <p>Trained professionals dedicated to crafting your perfect cup.</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="Cozy Coffee Shop">
+                <h3>Cozy Ambiance</h3>
+                <p>A warm and inviting space to enjoy your favorite brew.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Join Our Coffee Club</h2>
+        <p>Get exclusive offers and updates about our seasonal specials.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Brew & Bean. All rights reserved.</p>
+    </footer>
+</body>
+</html>

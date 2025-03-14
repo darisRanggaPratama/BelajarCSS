@@ -1,0 +1,129 @@
+/* Reset default styles agar konsisten di semua browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pengaturan teks dasar untuk body */
+body {
+    font-family: 'Roboto', sans-serif; /* Font-family dari Google Fonts */
+    font-size: 16px; /* Ukuran font dasar */
+    line-height: 1.5; /* Jarak antar baris */
+    color: #333333; /* Warna teks utama dalam HEX */
+    background-color: #FFFFFF; /* Warna latar belakang dalam HEX */
+}
+
+/* Header */
+header {
+    background-color: #6F4E37; /* Warna coklat kopi dalam HEX */
+    color: white; /* Warna teks menggunakan nama warna */
+    text-align: center; /* Penyelarasan teks */
+    padding: 20px;
+}
+
+header h1 {
+    font-family: 'Lobster', cursive; /* Font-family untuk heading */
+    font-size: 2.5em; /* Ukuran font relatif */
+    font-weight: normal; /* Berat font */
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigasi */
+nav {
+    background-color: #A67B5B; /* Warna coklat muda dalam HEX */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* Tebal untuk tautan */
+}
+
+/* Section */
+section {
+    padding: 20px;
+}
+
+section h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: #6F4E37;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Article */
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    font-size: 1.5em;
+    color: #A67B5B;
+}
+
+article p {
+    font-size: 1em;
+    color: #333333;
+}
+
+/* Demonstrasi warna */
+.demo-color {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.color-name {
+    background-color: brown; /* Format nama warna */
+}
+
+.color-hex {
+    background-color: #6F4E37; /* Format HEX */
+}
+
+.color-rgb {
+    background-color: rgb(111, 78, 55); /* Format RGB */
+}
+
+.color-rgba {
+    background-color: rgba(111, 78, 55, 0.5); /* Format RGBA dengan transparansi */
+}
+
+.color-hsl {
+    background-color: hsl(25, 34%, 33%); /* Format HSL */
+}
+
+/* Footer */
+footer {
+    background-color: #EDC9AF; /* Warna krem dalam HEX */
+    color: #333333;
+    text-align: center;
+    padding: 20px;
+}
+
+footer h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+    color: #6F4E37;
+}
+
+footer p {
+    font-size: 1em;
+}

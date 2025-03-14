@@ -1,0 +1,95 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Menggunakan Google Font 'Poppins' */
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* ukuran dasar teks */
+    line-height: 1.6;
+    color: rgb(33, 33, 33); /* warna teks menggunakan format RGB */
+    background-color: rgba(240, 240, 240, 1); /* latar belakang menggunakan format RGBA */
+    text-align: center;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: hsl(30, 100%, 50%); /* background header menggunakan format HSL */
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: #FFFFFF; /* warna teks menggunakan format HEX */
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    color: white; /* warna teks dengan nama warna */
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 40px 20px;
+    background-color: #f0f0f0; /* background menggunakan format HEX */
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(70, 70, 70); /* warna menggunakan format RGB */
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(70, 70, 70, 0.8); /* warna menggunakan format RGBA */
+  }
+  
+  /* Info Section */
+  .info {
+    padding: 30px 15px;
+  }
+  
+  .info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    color: hsl(210, 50%, 40%); /* warna menggunakan format HSL */
+  }
+  
+  .info p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 600px;
+    color: #333333; /* warna teks menggunakan format HEX */
+  }
+  
+  /* Footer */
+  footer {
+    padding: 15px 10px;
+    background-color: rgb(33, 33, 33);
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+  }
+  

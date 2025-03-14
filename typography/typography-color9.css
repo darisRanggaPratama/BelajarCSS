@@ -1,0 +1,100 @@
+/* Pengaturan Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #8B4513; /* Hexadecimal */
+}
+
+h2 {
+    font-size: 2rem;
+    color: rgb(139, 69, 19); /* RGB */
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: rgba(139, 69, 19, 0.8); /* RGBA */
+}
+
+h4 {
+    font-size: 1.25rem;
+    color: hsl(30, 100%, 40%); /* HSL */
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Pengaturan Warna */
+.header {
+    background-color: #F5F5DC; /* Hex */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.hero {
+    background: url('coffee-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    display: inline-block;
+}
+
+.tagline {
+    color: rgb(255, 255, 240); /* RGB */
+}
+
+.btn {
+    background-color: hsl(30, 100%, 50%); /* HSL */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: hsla(30, 100%, 40%, 0.9); /* HSLA */
+}
+
+.menu {
+    padding: 2rem;
+    background-color: rgba(245, 245, 220, 0.8); /* RGBA */
+}
+
+.menu-item {
+    background-color: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.footer {
+    background-color: sienna; /* Nama warna */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
