@@ -1,0 +1,56 @@
+/* 1. Dasar. Selector Tag {property: value} */
+h1 {
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    color: brown;
+}
+
+/* 2. Selector Class */
+.text-red{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 3. Selector ID */
+#special-paragraph{
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* 4. Selector Atribut */
+input[type="text"]{
+    border: 2px solid green;
+    background-color: burlywood;
+}
+
+/* 5. Selector Universal */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1px;
+    padding: 10px;
+}
+
+/* Cascading & Specificity */
+/* 1. Cascading */
+div#container .content p{
+    color: cyan;
+    /* Specify tinggi */
+}
+
+.volume p{
+    color: orange;
+    /* Specify sedang */    
+}
+
+/* Solusi konflik. Gunakan !important */
+.important-text{
+    font-weight: bold!important;
+    font-style: italic;
+}
+
+
