@@ -1,0 +1,78 @@
+/* =========================================
+   Variabel CSS (Untuk modularitas & tema)
+   ========================================= */
+:root {
+    --color-primary: #2c3e50;
+    --color-bg: #ecf0f1;
+    --color-text: #333;
+    --spacing-md: 1.5rem;
+    --radius-sm: 8px;
+}
+
+/* =========================================
+   Reset Dasar (Clean Code)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif, -apple-system;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* =========================================
+   Komponen UI
+   ========================================= */
+.header {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: var(--spacing-md);
+}
+
+.content, .sidebar {
+    background: #fff;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+/* =========================================
+   Sistem Tata Letak Utama (Mobile-First)
+   ========================================= */
+.main-layout {
+    display: grid;
+    /* Default untuk HP: 1 kolom penuh, ditumpuk ke bawah */
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+}
+
+/* =========================================
+   Media Queries (Responsivitas Desktop/Tablet)
+   ========================================= */
+@media (min-width: 768px) {
+    .main-layout {
+        /* Saat layar lebar (>= 768px): Berubah jadi 2 kolom (75% Konten, 25% Sidebar) */
+        grid-template-columns: 3fr 1fr;
+    }
+}
