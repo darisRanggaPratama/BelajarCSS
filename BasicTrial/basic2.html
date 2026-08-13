@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="basic2.css">
+    <title>Basic CSS</title>
+</head>
+
+<body>
+    <!-- Contoh Selector -->
+    <h1>Judul Artikel</h1>
+    <p>Paragraf biasa</p>
+    <p class="text-red">Paragraf dengan class merah</p>
+    <p class="conflict">Contoh conflict</p>
+    <p id="special-paragraph" class="text-red">Paragraf spesial dengan ID</p>
+    <input type="text" value="Input text">
+
+    <!-- Contoh Specificity -->
+    <div id="container">
+        <div class="content">
+            <p>Paragraf dengan specificity tinggi</p>
+        </div>
+        <div class="volume">
+            <p>Paragraf dengan specificity sedang</p>
+        </div>
+    </div>
+
+    <!-- Contoh !important-->
+    <p class="important-text" style="font-weight: normal;">Paragraf dengan !important</p>
+
+</body>
+
+</html>

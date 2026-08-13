@@ -1,0 +1,21 @@
+/* CSS Internal: Selector, Property, Value */
+h1, h5, h6 {
+    color: white;
+    font-size: 30px;
+    background-color: black;
+    border: 5px dashed red;
+}
+
+/* CSS Internal: Class */
+.test {
+    color: blue;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CSS Internal: ID. Unique */
+#myId {
+    color: green;
+    font-size: 20px;
+    font-family: comic sans ms, cursive, sans-serif;
+}
