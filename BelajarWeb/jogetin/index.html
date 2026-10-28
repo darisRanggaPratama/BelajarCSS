@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stickman Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- data-mode diubah oleh script.js: idle | dance | run | jump -->
+  <main id="stage" data-mode="idle">
+
+    <!-- ===== Lapisan latar (masing-masing hanya tampil di modenya) ===== -->
+    <div class="bg bg-dance"><div class="beams"></div><div class="beams b2"></div><div class="flash"></div></div>
+    <div class="bg bg-run"><div class="sun"></div><div class="layer far"></div><div class="layer mid"></div></div>
+    <div class="bg bg-jump"><div class="space"></div></div>
+    <div class="clouds back"></div>
+    <div class="ground"><div class="layer near"></div></div>
+
+    <!-- Wadah partikel: debu, speed lines, confetti -->
+    <div id="fx"></div>
+    <div id="shadow"></div>
+
+    <!-- ===== Stickman (SVG). Setiap <g> adalah sendi yang bisa berputar ===== -->
+    <div id="stickman">
+      <svg viewBox="-110 -125 220 210" role="img" aria-label="Karakter stickman">
+        <g id="rig">
+          <g id="thighL"><line x1="0" y1="0" x2="0" y2="38"/>
+            <g id="shinL"><line x1="0" y1="0" x2="0" y2="38"/><line x1="0" y1="38" x2="-11" y2="38"/></g></g>
+          <g id="thighR"><line x1="0" y1="0" x2="0" y2="38"/>
+            <g id="shinR"><line x1="0" y1="0" x2="0" y2="38"/><line x1="0" y1="38" x2="11" y2="38"/></g></g>
+          <g id="body"><line x1="0" y1="0" x2="0" y2="-70"/>
+            <g id="head">
+              <circle cx="0" cy="-22" r="22" fill="#fff" stroke="none"/>
+              <circle class="cheek" cx="-14" cy="-16" r="4"/><circle class="cheek" cx="14" cy="-16" r="4"/>
+              <circle cx="-7" cy="-26" r="2.6" fill="#222" stroke="none"/><circle cx="7" cy="-26" r="2.6" fill="#222" stroke="none"/>
+              <path d="M-9 -16 Q0 -8 9 -16" fill="none" stroke="#222" stroke-width="2.6"/>
+            </g>
+            <g id="armL"><line x1="0" y1="0" x2="0" y2="32"/><g id="foreL"><line x1="0" y1="0" x2="0" y2="30"/></g></g>
+            <g id="armR"><line x1="0" y1="0" x2="0" y2="32"/><g id="foreR"><line x1="0" y1="0" x2="0" y2="30"/></g></g>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="clouds front"></div>
+
+    <header><h1>Stickman Studio</h1><span id="status">Siap beraksi</span></header>
+
+    <nav class="controls" aria-label="Kontrol animasi">
+      <button data-action="dance" aria-pressed="false">Dance</button>
+      <button data-action="run" aria-pressed="false">Run</button>
+      <button data-action="jump" aria-pressed="false">Jump</button>
+    </nav>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

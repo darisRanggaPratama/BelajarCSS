@@ -1,0 +1,140 @@
+/* ===== Properti yang bisa dianimasikan: hue warna disco (diubah tiap beat oleh JS) ===== */
+@property --h1 { syntax: '<number>'; inherits: false; initial-value: 280; }
+@property --h2 { syntax: '<number>'; inherits: false; initial-value: 190; }
+@property --h3 { syntax: '<number>'; inherits: false; initial-value: 330; }
+@property --h4 { syntax: '<number>'; inherits: false; initial-value: 250; }
+
+/* ===== Variabel utama (ubah di sini untuk menyesuaikan tampilan) ===== */
+:root {
+  --fig: clamp(150px, 30vmin, 280px);               /* lebar karakter */
+  --ground: 26%;                                     /* tinggi tanah dari bawah (samakan dgn GROUND di JS) */
+  --horizon: calc(var(--ground) + var(--fig) * .04); /* garis tanah tempat kaki berpijak */
+}
+* { box-sizing: border-box; margin: 0; }
+body { height: 100dvh; overflow: hidden; background: #18181b; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+
+#stage {
+  position: relative; width: 100%; height: 100dvh; overflow: hidden;
+  background: radial-gradient(circle at 50% 35%, #34343c, #18181b 70%);
+  --gc: #1f1f24; /* warna tanah, berubah per mode */
+}
+#stage[data-mode=run]   { --gc: #2b1a3f; }
+#stage[data-mode=jump]  { --gc: #3f9b5a; }
+#stage[data-mode=dance] { --gc: rgba(0,0,0,.45); }
+
+/* ===== Lapisan latar: fade halus saat pindah mode ===== */
+.bg { position: absolute; inset: 0; opacity: 0; transition: opacity .6s; }
+[data-mode=dance] .bg-dance, [data-mode=run] .bg-run, [data-mode=jump] .bg-jump { opacity: 1; }
+
+/* --- Dance: blob RGB acak yang terus bergerak + sorot lampu + kilatan --- */
+.bg-dance {
+  background:
+    radial-gradient(circle at 20% 30%, hsl(var(--h1) 95% 55%), transparent 45%),
+    radial-gradient(circle at 80% 25%, hsl(var(--h2) 95% 55%), transparent 45%),
+    radial-gradient(circle at 50% 90%, hsl(var(--h3) 95% 55%), transparent 55%),
+    hsl(var(--h4) 70% 12%);
+  background-size: 200% 200%;
+  transition: opacity .6s, --h1 .45s, --h2 .45s, --h3 .45s, --h4 .45s;
+  animation: pan 5s linear infinite;
+}
+@keyframes pan { 0% { background-position: 0 0; } 50% { background-position: 100% 60%; } 100% { background-position: 0 0; } }
+.beams {
+  position: absolute; left: 22%; top: -5%; width: 56%; height: 110%; transform-origin: 50% 0;
+  clip-path: polygon(50% 0, 32% 100%, 68% 100%);
+  background: linear-gradient(rgba(255,255,255,.6), transparent 85%); mix-blend-mode: screen;
+  animation: sweep 1.6s ease-in-out infinite alternate; animation-play-state: paused;
+}
+.beams.b2 { animation-duration: 2.3s; animation-direction: alternate-reverse; left: 30%; opacity: .7; }
+[data-mode=dance] .beams { animation-play-state: running; }
+@keyframes sweep { from { transform: rotate(-38deg); } to { transform: rotate(38deg); } }
+.flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+.flash.on { animation: flash .4s ease-out; }
+@keyframes flash { 0% { opacity: .6; } 100% { opacity: 0; } }
+
+/* --- Run: langit senja + parallax (semakin dekat semakin cepat) --- */
+.bg-run { background: linear-gradient(#2d1b69, #9d174d 45%, #f97316 80%, #fbbf24); }
+.sun {
+  position: absolute; left: 68%; bottom: calc(var(--horizon) + 14%); aspect-ratio: 1; width: clamp(80px, 16vmin, 160px);
+  border-radius: 50%; background: radial-gradient(#fff7c2, #fbbf24 60%, transparent 72%);
+}
+.layer {
+  position: absolute; left: 0; right: 0; background-repeat: repeat-x; background-position: 0 100%;
+  background-size: var(--tile) 100%; animation: scroll var(--sp) linear infinite; animation-play-state: paused;
+}
+[data-mode=run] .layer { animation-play-state: running; }
+@keyframes scroll { to { background-position-x: calc(var(--tile) * -1); } }
+.bg-run .layer { bottom: var(--horizon); }
+.far { --tile: 400px; --sp: 12s; height: 30%;  /* gunung jauh (lambat) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 120' preserveAspectRatio='none'%3E%3Cpath d='M0 120L70 30 130 90 210 10 290 100 340 50 400 120z' fill='%23472a5c'/%3E%3C/svg%3E"); }
+.mid { --tile: 300px; --sp: 2.2s; height: 20%;  /* pohon menengah */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100' preserveAspectRatio='none'%3E%3Cpath d='M20 100L50 30 80 100zM150 100L185 15 220 100zM240 100L262 50 284 100z' fill='%231d1230'/%3E%3C/svg%3E"); }
+.ground .layer.near { --tile: 100px; --sp: .22s; bottom: 0; height: 100%; opacity: 0; transition: opacity .6s;  /* garis tanah (tercepat) */
+  background-image: linear-gradient(90deg, rgba(255,255,255,.12) 45%, transparent 45%); }
+[data-mode=run] .ground .layer.near { opacity: 1; }
+
+/* --- Jump: langit biru yang makin gelap saat naik (--alt diatur JS) --- */
+.bg-jump { background: linear-gradient(to top, #cfeeff, #5aa9f0 50%, #1d4ed8); }
+.space { position: absolute; inset: 0; background: linear-gradient(#050a24, transparent 80%); opacity: var(--alt, 0); }
+
+/* Tanah: ikut turun saat kamera mengikuti lompatan (--cam diatur JS) */
+.ground {
+  position: absolute; left: 0; right: 0; bottom: 0; height: var(--horizon); overflow: hidden;
+  background: var(--gc); border-top: 1px solid rgba(255,255,255,.12);
+  transform: translateY(var(--cam, 0px)); transition: background .6s;
+}
+
+/* ===== Awan: ada yang di belakang & di depan karakter, jadi karakter "menembus" awan ===== */
+.clouds { position: absolute; inset: 0; opacity: 0; transition: opacity .6s; pointer-events: none; transform: translateY(var(--cam, 0px)); }
+.clouds.back { z-index: 1; }
+.clouds.front { z-index: 4; }
+.clouds.front .cloud { opacity: .8; }
+[data-mode=jump] .clouds { opacity: 1; }
+.cloud { position: absolute; left: 0; bottom: var(--y); width: 180px; height: 54px; border-radius: 60px; background: #fff; animation: drift linear infinite; }
+.cloud::before, .cloud::after { content: ''; position: absolute; border-radius: 50%; background: #fff; }
+.cloud::before { width: 80px; height: 80px; left: 28px; top: -38px; }
+.cloud::after { width: 62px; height: 62px; left: 96px; top: -28px; }
+@keyframes drift { from { transform: translateX(-300px) scale(var(--s)); } to { transform: translateX(100vw) scale(var(--s)); } }
+
+/* ===== Karakter ===== */
+#stickman {
+  position: absolute; z-index: 3; left: 50%; bottom: var(--ground); width: var(--fig); margin-left: calc(var(--fig) / -2);
+  transform-origin: 50% 96%; /* titik pusat squash & stretch = telapak kaki */
+}
+#stickman svg {
+  display: block; width: 100%; height: auto; overflow: visible; transition: filter .4s;
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,.45));
+}
+#stickman line { stroke: #fff; stroke-width: 5; stroke-linecap: round; }
+.cheek { fill: #ff7aa2; stroke: none; opacity: 0; transition: opacity .4s; }
+[data-mode=dance] .cheek { opacity: .85; }
+/* Motion blur saat lari: bayangan jejak di belakang karakter */
+[data-mode=run] #stickman svg { filter: drop-shadow(-14px 0 5px rgba(160,210,255,.45)) drop-shadow(-30px 0 8px rgba(160,210,255,.22)) blur(.4px); }
+
+#shadow {
+  position: absolute; z-index: 2; left: 50%; bottom: calc(var(--ground) - 1%); width: calc(var(--fig) * .5); height: calc(var(--fig) * .07);
+  margin-left: calc(var(--fig) * -.25); border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(4px);
+}
+
+/* ===== Partikel (dibuat & dihapus oleh JS) ===== */
+#fx { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.speed { position: absolute; left: 100%; height: 2px; border-radius: 2px; background: linear-gradient(270deg, transparent, #fff); animation: speed .35s linear forwards; }
+@keyframes speed { to { transform: translateX(-130vw); } }
+.dust { position: absolute; left: calc(50% - var(--fig) * .12); bottom: var(--horizon); border-radius: 50%; background: rgba(255,235,210,.6); filter: blur(2px); animation: dust .6s ease-out forwards; }
+@keyframes dust { to { transform: translate(-160px, var(--dy)) scale(2.4); opacity: 0; } }
+.confetti { position: absolute; top: -20px; width: 9px; height: 14px; animation: fall linear forwards; }
+@keyframes fall { to { transform: translate(var(--dx), 110vh) rotate(720deg); } }
+
+/* ===== UI ===== */
+header { position: absolute; z-index: 5; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 18px 22px; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.5); }
+h1 { font-size: 1rem; font-weight: 700; letter-spacing: .02em; }
+#status { font-size: .85rem; padding: 6px 12px; border-radius: 99px; background: rgba(0,0,0,.35); backdrop-filter: blur(6px); }
+.controls { position: absolute; z-index: 5; left: 50%; bottom: max(18px, 4%); transform: translateX(-50%); display: flex; gap: 12px; }
+button {
+  font: 600 1rem/1 system-ui, sans-serif; padding: 14px 26px; border: 0; border-radius: 14px; cursor: pointer;
+  background: #fff; color: #18181b; box-shadow: 0 6px 18px rgba(0,0,0,.35); transition: transform .15s, background .3s, color .3s;
+}
+button:hover { transform: translateY(-2px); }
+button:active { transform: translateY(1px) scale(.97); }
+button:focus-visible { outline: 3px solid #a78bfa; outline-offset: 3px; }
+button.on { background: linear-gradient(135deg, #7c3aed, #ec4899); color: #fff; }
+@media (max-width: 420px) { button { padding: 12px 18px; } .controls { gap: 8px; } }

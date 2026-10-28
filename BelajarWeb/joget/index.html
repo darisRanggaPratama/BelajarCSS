@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Stickman Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container Utama Scene -->
+    <div id="sceneContainer" class="scene-container">
+        
+        <!-- Lapisan Efek Background -->
+        <div class="bg-effects">
+            <div id="discoLights" class="disco-lights"></div>
+            <div id="speedLines" class="speed-lines"></div>
+            <div id="clouds" class="clouds"></div>
+        </div>
+
+        <!-- Karakter Stickman -->
+        <div id="stickman" class="stickman">
+            <div class="head">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="smile"></div>
+            </div>
+            <div class="torso"></div>
+            <div class="arm left-arm"></div>
+            <div class="arm right-arm"></div>
+            <div class="leg left-leg"></div>
+            <div class="leg right-leg"></div>
+        </div>
+    </div>
+
+    <!-- Panel Kontrol -->
+    <div class="controls">
+        <button id="btnDance" class="control-btn">Dance</button>
+        <button id="btnRun" class="control-btn">Run</button>
+        <button id="btnJump" class="control-btn">Jump</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

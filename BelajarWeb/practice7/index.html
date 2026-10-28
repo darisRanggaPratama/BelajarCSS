@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" placeholder="Enter your password"></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td>
+                    <input type="radio" name="gender">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="skill">Skill</label></td>
+                <td>
+                    <input type="checkbox">HTML5
+                    <input type="checkbox">CSS3
+                    <input type="checkbox">JavaScript
+                    <input type="checkbox">PHP8
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="message">Message</label></td>
+                <td><textarea name="message" rows="4" cols="30" placeholder="Enter your message"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country</label></td>
+                <td>
+                    <select name="country" id="country">
+                        <option value="indonesia">Indonesia</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="singapore">Singapore</option>
+                    </select>
+                </td>
+
+            <tr>
+                <td> </td>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+h1{
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+    /* text-decoration: underline; */
+     text-decoration-line: line-through; 
+     font-family: comic sans ms;
+}
