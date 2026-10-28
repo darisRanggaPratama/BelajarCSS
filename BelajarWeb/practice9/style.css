@@ -1,0 +1,14 @@
+/* External CSS */
+
+h1{
+    color: green;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: Arial;    
+}
+
+a{
+    color: blue;
+    text-decoration: line-through;
+    font-family: Arial;
+}
