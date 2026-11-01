@@ -1,0 +1,58 @@
+.circle {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.oval {
+    width: 500px;
+    height: 300px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.rounded-rectangle {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    border-radius: 25px;
+}
+
+.rectangle {
+    width: 300px;
+    height: 300px;
+    background-color: cyan;
+}
+
+/* Mengatur tata letak dasar */
+.triangle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Latar belakang standar */
+}
+
+/* Mengontrol dimensi ruang kanvas segitiga */
+.rounded-triangle {
+  width: 200px;
+  height: 200px;
+  overflow: visible; /* Mencegah sudut terpotong oleh batas viewBox */
+}
+
+/* Logika presentasi untuk menumpulkan sudut */
+.rounded-triangle polygon {
+  fill: #0d6efd;             /* Warna biru utama (palet Bootstrap 5) */
+  stroke: #0d6efd;           /* Warna garis tepi harus sama dengan isi */
+  stroke-width: 15px;        /* Menentukan seberapa besar radius kelengkungan */
+  stroke-linejoin: round;    /* Properti krusial untuk membuat sudut tidak lancip */
+  transition: all 0.3s ease; /* Transisi halus untuk interaktivitas */
+}
+
+/* Interaksi hover opsional */
+.rounded-triangle polygon:hover {
+  fill: #0b5ed7;
+  stroke: #0b5ed7;
+  stroke-width: 20px;
+}
